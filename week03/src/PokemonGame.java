@@ -1,7 +1,7 @@
 
 public class PokemonGame {
     public static void main(String[] args) {
-        Pokemon pikachu = new Pokeemon();
+        Pokemon pikachu = new Pokemon();
         Pokemon charizard = new Pokemon();
 
         pikachu.name = "피카츄";
