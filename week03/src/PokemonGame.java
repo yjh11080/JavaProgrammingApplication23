@@ -1,4 +1,4 @@
-package version06;
+package version07;
 
 public class PokemonGame {
     public static void main(String[] args) {
@@ -39,5 +39,8 @@ public class PokemonGame {
                 + "의 체력은 " + pikachu.getHp()
                 + "이고 레벨은 " + pikachu.getLevel()
                 + "입니다");
+
+        charizard.attack(squirtle);
+        squirtle.attack();
     }
 }
