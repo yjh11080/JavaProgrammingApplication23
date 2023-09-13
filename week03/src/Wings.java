@@ -1,4 +1,3 @@
-package version14;
 
 public class Wings implements Flyable{
 //    @Override

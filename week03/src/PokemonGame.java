@@ -1,4 +1,4 @@
-package version14;
+
 public class PokemonGame {
     public static void main(String[] args) {
 //        Pokemon p0 = new Pokemon();
