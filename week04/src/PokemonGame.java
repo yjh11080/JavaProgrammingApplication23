@@ -5,41 +5,43 @@ public class PokemonGame {
         System.out.println("포켓몬 게임을 시작합니다\n야생 포켓몬이 나타났습니다");
 //        System.out.println(Math.random()); // 0.0 <= x < 1.0
 //        System.out.println((int)(Math.random()*6)+1); // 0.0 <= x < 1.0
+        //적군 포켓몬 랜덤 생성
+        Pokemon enemy = null;
         int enemyPick =(int)(Math.random()*3);
         if(enemyPick == 0 ){
             NoFly noFly = new NoFly();
-            Pikachu pikachu = new Pikachu(noFly);
+            enemy = new Pikachu(noFly);
         } else if (enemyPick == 1) {
             NoFly noFly = new NoFly();
-            Squirtle squirtle = new Squirtle(noFly);
+            enemy = new Squirtle(noFly);
         } else if (enemyPick == 2) {
             Wings wings = new Wings();
-            Charizard charizard = new Charizard(wings);
+            enemy = new Charizard(wings);
         } else {
             System.out.println("여기는 영원히 실행 안됩니다");
         }
 
         // 플레이어 포켓몬스터 선택
+        //Pokemon player = new pokemon(); // 추상클래스의 객체는 생성 불가
+        Pokemon player = null; //추상클래스의 변수 선언은 가능 (upcasting 용)
         Scanner scanner = new Scanner(System.in);
         System.out.println("포켓몬을 고르세요.\n1) 파카츄  2) 꼬부기  3) 리자몽 :");
-        int menu = scanner.nextInt();
-        if(menu == 1) {
-
-            Pikachu p1 = new Pikachu(new NoFly());
-        } else if(menu == 2) {
-
-            Squirtle p2 = new Squirtle(new NoFly());
-        } else if (menu == 3) {
-            Charizard p3 = new Charizard(new Wings());
-        } else {
-            System.out.println("정상적인 값이 아닙니다!");
-        }
+        int pokemonPick = scanner.nextInt();
+        if(pokemonPick == 1) {
+            player = new Pikachu(new NoFly());
+        } else if(pokemonPick == 2) {
+            player = new Squirtle(new NoFly());
+        } else if (pokemonPick == 3) {
+            player = new Charizard(new Wings());
+       } else {
+          System.out.println("정상적인 값이 아닙니다!");
+       }
 
         while (true) {
             System.out.println("\t1) 전투  2) 도망  3) 종료 : ");
-            menu = scanner.nextInt();
+             int menu = scanner.nextInt();
             if(menu == 1){
-
+                player.attack(enemy);
             } else if ((menu == 2)) {
 
             }else{
