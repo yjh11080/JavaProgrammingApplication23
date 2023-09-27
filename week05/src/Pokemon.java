@@ -6,6 +6,8 @@ public abstract class Pokemon {
     protected String name;
     protected int attackRate;
     protected int defenceRate;
+    protected  String[] skills;
+    protected  int[] specialAttackRate;
 
     private static int pokemonCount = 0;  // 클래스(정적) 변수
 
@@ -55,9 +57,10 @@ public abstract class Pokemon {
 
     public abstract void attack();
 
-    public void attack(Pokemon targetPokemon, String skill) {
-        System.out.println(this.name +"이(가) " + targetPokemon.name + "에게 " + skill + "공격 시전!");
-        int temporaryAttackRate = this.attackRate - targetPokemon.defenceRate;
+    public void attack(Pokemon targetPokemon, int skillNumber) {
+     //   System.out.println(this.name +"이(가) " + targetPokemon.name + "에게 " + skill + "공격 시전!");
+        System.out.println(this.name +"이(가) " + targetPokemon.name + "에게 " + this.skills[skillNumber-1] + "공격 시전!");
+        int temporaryAttackRate = (this.attackRate + this.specialAttackRate[skillNumber-1]) - targetPokemon.defenceRate;
         if(temporaryAttackRate < 0)
             temporaryAttackRate = 0;
         targetPokemon.hp = targetPokemon.hp - temporaryAttackRate;
