@@ -45,7 +45,7 @@ public class PokemonGame {
                 player.attack(enemy, scanner.next());
             } else if (menu == 2) {
 
-            }else{
+            }else {
                 System.out.println("게임을 종료합니다.");
                 break;
             }
