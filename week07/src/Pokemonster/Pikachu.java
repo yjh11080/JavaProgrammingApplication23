@@ -1,6 +1,7 @@
 package Pokemonster;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Pikachu extends Pokemon{
     public Pikachu(Flyable f) {
@@ -13,17 +14,21 @@ public class Pikachu extends Pokemon{
         this.name = "피카츄";
         //this.flyable = new Pokemonster.NoFly(); // Association, Has-a (Composition)
         this.flyable = f;
-        //this.skills = new String[]{"전기쇼크", "전광석화", "10만볼트"};
-        //this.specialAttackRate = new int[] {40, 40, 90};
-        this.skills = new ArrayList<>();
-        this.skills.add("전기쇼크");
-        this.skills.add("전광석화");
-        this.skills.add("10만볼트");
+//        this.skills = new String[]{"전기쇼크", "전광석화", "10만볼트"};
+//        this.specialAttackRate = new int[] {40, 40, 90};
 
-        this.specialAttackRate = new ArrayList<>();
-        this.specialAttackRate.add(40);
-        this.specialAttackRate.add(40);
-        this.specialAttackRate.add(90);
+//        this.skills = new ArrayList<>();
+//        this.skills.add("전기쇼크");
+//        this.skills.add("전광석화");
+//        this.skills.add("10만볼트");
+//
+//        this.specialAttackRate = new ArrayList<>();
+//        this.specialAttackRate.add(40);
+//        this.specialAttackRate.add(40);
+//        this.specialAttackRate.add(90);
+
+        this.skills = new ArrayList<>(Arrays.asList("전기쇼크","전광석화","10만볼트"));
+        this.specialAttackRate = new ArrayList<>(Arrays.asList(40,40,90));
     }
 
     @Override

@@ -47,8 +47,8 @@ try {
         System.out.print("\t1) 전투  2) 도망  3) 종료 : ");
         menu = scanner.nextInt();
         if (menu == 1) {
-            //System.out.print("전투 기술 : " + player.skills[0] + "   2) " + player.skills[1] + "    3) " + player.skills[2] + " : ");
-            System.out.print("전투 기술 : " + player.skills.get(0) + "   2) " + player.skills.get(1) + "    3) " + player.skills.get(2) + " : ");
+            //System.out.print("전투 기술 1) " + player.skills[0] + "   2) " + player.skills[1] + "    3) " + player.skills[2] + " : ");
+            System.out.print("전투 기술 1) " + player.skills.get(0) + "   2) " + player.skills.get(1) + "    3) " + player.skills.get(2) + " : ");
             skillMenu = scanner.nextInt();
             // player.attack(enemy, scanner.next());
             player.attack(enemy, skillMenu);
@@ -63,11 +63,10 @@ try {
         } catch (InputMismatchException err) {
             System.out.println("입력값은 숫자입니다.");
             System.out.println("예외 내용 : " + err.getMessage());
-
-        }catch (Exception err) {
+        } catch (Exception err) {
             System.out.println("예외가 발생했습니다.");
             System.out.println("예외 내용 : " + err.getMessage());
-        }finally {
+        } finally {
             System.out.println("프로그램 종료!");
         }
 
