@@ -13,7 +13,6 @@ public class PokemonGame {
     public static Pokemon enemy = null;
     public static void main(String[] args) {
         System.out.println("포켓몬 게임을 시작합니다...");
-
         try{
             Pokemon player = null;  // 추상클래스의 변수 선언은 가능 (upcasting 용)
             Scanner scanner = new Scanner(System.in);
