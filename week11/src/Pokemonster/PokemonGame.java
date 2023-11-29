@@ -13,11 +13,12 @@ public class PokemonGame {
     public static Pokemon enemy = null;
     public static void main(String[] args) {
         System.out.println("포켓몬 게임을 시작합니다...");
+
         try{
             Pokemon player = null;  // 추상클래스의 변수 선언은 가능 (upcasting 용)
             Scanner scanner = new Scanner(System.in);
             while(true){
-                System.out.print("포켓몬을 고르세요.\n 1) 피카츄   2) 꼬부기   3) 리자몽 : ");
+                System.out.print("포켓몬을 고르세요.\n1) 피카츄   2) 꼬부기   3) 리자몽 : ");
                 int pokemonPick = scanner.nextInt();
                 if(pokemonPick == 1){
                     //player = new Pikachu(new NoFly());
@@ -43,7 +44,7 @@ public class PokemonGame {
                 if(menu == 1){
                     while(true){
                         //System.out.print("전투 기술 1) " + player.skills[0] + "   2) " +  player.skills[1] + "   3) " +  player.skills[2] + " : ");
-                        System.out.print("전투 기술 1) " + player.skills.get(1) + "   2) " +  player.skills.get(2) + "   3) " +  player.skills.get(3) + " : ");
+                        System.out.print("전투 기술 1) " + player.skills.get(0) + "   2) " +  player.skills.get(1) + "   3) " +  player.skills.get(2) + " : ");
                         skillMenu = scanner.nextInt();
                         if (skillMenu <= player.skills.size())
                         {
